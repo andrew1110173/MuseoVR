@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -21,6 +21,7 @@ public class Dialog : MonoBehaviour {
 
     //Texto del canvas
     private Text Title_Edit;
+    private Text Year_Edit;
     private Text Description_Edit;
     private Text Character_Edit;
 
@@ -40,6 +41,7 @@ public class Dialog : MonoBehaviour {
     private void OnTriggerEnter(Collider other)
     {
         DialogBox.transform.Find("Title").GetComponent<Text>().text = Title;
+        DialogBox.transform.Find("Year").GetComponent<Text>().text = Year.ToString();
         DialogBox.transform.Find("Character").GetComponent<Text>().text = Character;
 
         if (other.tag == "Hand")
